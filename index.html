@@ -32,13 +32,13 @@
 <body>
     <style>
         :root {
-            --bg: #0b0b0b;
-            --text: #1a1510;
-            --text-muted: #4a443e;
-            --accent: #3e1aa2;
-            --light-gray: #fff3e0;
-            --border: #ffe0b2;
-            --primary: #3e1aa2;
+            --bg: #ffffff;
+            --text: #1a202c;
+            --text-muted: #4a5568;
+            --accent: #0055ff;
+            --light-gray: #f7fafc;
+            --border: #e2e8f0;
+            --primary: #0055ff;
             --white: #ffffff;
             --container-width: 1200px;
             --transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -849,28 +849,50 @@
         .social-links {
             display: flex;
             align-items: center;
-            gap: 1.5rem;
+            gap: 1rem;
+            flex-wrap: wrap;
         }
 
-        .social-links a {
-            display: flex;
+        .social-btn {
+            display: inline-flex;
             align-items: center;
-            justify-content: center;
-            color: var(--text-muted);
-        }
-
-        .social-links a:hover {
+            gap: 0.6rem;
+            padding: 0.8rem 1.5rem;
+            border-radius: 50px;
+            font-size: 0.95rem;
+            font-weight: 600;
             color: var(--text);
+            background: var(--light-gray);
+            border: 1px solid var(--border);
+            transition: var(--transition);
+            text-decoration: none;
         }
 
-        .social-links i {
-            width: 24px;
-            height: 24px;
-            font-size: 24px;
-            /* For Font Awesome */
+        .social-btn i {
+            width: 20px;
+            height: 20px;
+            font-size: 20px;
             display: flex;
             align-items: center;
             justify-content: center;
+        }
+
+        .social-btn.linkedin:hover {
+            background: #0077b5;
+            color: white;
+            border-color: #0077b5;
+        }
+
+        .social-btn.github:hover {
+            background: #24292e;
+            color: white;
+            border-color: #24292e;
+        }
+
+        .social-btn.whatsapp:hover {
+            background: #25D366;
+            color: white;
+            border-color: #25D366;
         }
 
         .contact-form {
@@ -1240,10 +1262,12 @@
             </div>
             <div class="about-grid">
                 <div class="about-image" data-aos="fade-right">
-                    <img src="./charlie.jpeg" alt="Sumaiya Thaslim Z" class="profile-img">
+                    <img src="./WhatsApp Image 2026-05-10 at 6.07.52 PM.jpeg" alt="Sumaiya Thaslim Z"
+                        class="profile-img">
                 </div>
                 <div class="about-text" data-aos="fade-left">
-                    <p>I am <strong>Sumaiya Thaslim Z</strong>, a dedicated Full Stack Developer and Software Engineer. I
+                    <p>I am <strong>Sumaiya Thaslim Z</strong>, a dedicated Full Stack Developer and Software Engineer.
+                        I
                         specialize
                         in building robust, scalable applications that solve real-world problems through clean code and
                         user-centric design.</p>
@@ -1429,43 +1453,29 @@
                 <span class="section-tag">Contact</span>
                 <h2 class="section-title">Let's Connect</h2>
             </div>
-            <div class="contact-wrapper">
-                <div class="contact-info" data-aos="fade-right">
-                    <h3>Get in touch</h3>
-                    <p>Have a project in mind or just want to say hi? Feel free to reach out.</p>
-                    <div class="contact-methods">
-                        <a href="mailto:sumaiyazahruddin@gmail.com" class="contact-link">
-                            <i data-lucide="mail"></i>
+            <div class="contact-wrapper"
+                style="grid-template-columns: 1fr; max-width: 700px; margin: 0 auto; text-align: center;">
+                <div class="contact-info" data-aos="fade-up">
+                    <h3 style="font-size: 2.5rem; margin-bottom: 1rem;">Get in touch</h3>
+                    <p style="font-size: 1.1rem; margin-bottom: 2.5rem; color: var(--text-muted);">Have a project in
+                        mind or just want to say hi? I am always open to discussing new projects, creative ideas or
+                        opportunities to be part of your visions. Reach out to me directly!</p>
+                    <div class="contact-methods"
+                        style="display: flex; flex-direction: column; align-items: center; gap: 1rem;">
+                        <a href="mailto:sumaiyazahruddin@gmail.com" class="contact-link"
+                            style="justify-content: center; font-size: 1.3rem; margin-bottom: 1rem;">
+                            <i data-lucide="mail" style="width: 28px; height: 28px;"></i>
                             sumaiyazahruddin@gmail.com
                         </a>
-                        <div class="social-links">
-                            <a href="https://www.linkedin.com/in/sumaiya-thaslim-z-7bb6172a5/" target="_blank"><i
-                                    data-lucide="linkedin"></i></a>
-                            <a href="https://github.com/SumaiyaThaslim" target="_blank"><i data-lucide="github"></i></a>
-                            <a href="https://wa.me/918807376896" target="_blank"><i
-                                    class="fa-brands fa-whatsapp"></i></a>
+                        <div class="social-links" style="justify-content: center; margin-top: 1rem;">
+                            <a href="https://www.linkedin.com/in/sumaiya-thaslim-z-7bb6172a5/" target="_blank"
+                                class="social-btn linkedin"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
+                            <a href="https://github.com/SumaiyaThaslim" target="_blank" class="social-btn github"><i
+                                    class="fa-brands fa-github"></i> GitHub</a>
+                            <a href="https://wa.me/918807376896" target="_blank" class="social-btn whatsapp"><i
+                                    class="fa-brands fa-whatsapp"></i> WhatsApp</a>
                         </div>
                     </div>
-                </div>
-                <div class="contact-form-container" data-aos="fade-left">
-                    <form id="contact-form" class="contact-form" action="https://formspree.io/f/shabaries2866@gmail.com"
-                        method="POST">
-                        <div class="form-group">
-                            <label for="name">Name</label>
-                            <input type="text" id="name" name="name" placeholder="Your Name" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="email">Email</label>
-                            <input type="email" id="email" name="email" placeholder="Your Email" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="message">Message</label>
-                            <textarea id="message" name="message" rows="5"
-                                placeholder="Tell me more about your requirements or just say hi..."
-                                required></textarea>
-                        </div>
-                        <button type="submit" class="btn btn-primary w-100">Send Message</button>
-                    </form>
                 </div>
             </div>
         </section>
@@ -1484,8 +1494,8 @@
             </div>
             <div class="footer-social">
                 <a href="https://www.linkedin.com/in/sumaiya-thaslim-z-7bb6172a5/" target="_blank"><i
-                        data-lucide="linkedin"></i></a>
-                <a href="https://github.com/SumaiyaThaslim" target="_blank"><i data-lucide="github"></i></a>
+                        class="fa-brands fa-linkedin"></i></a>
+                <a href="https://github.com/SumaiyaThaslim" target="_blank"><i class="fa-brands fa-github"></i></a>
                 <a href="https://wa.me/918807376896" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
             </div>
         </div>
@@ -1509,9 +1519,9 @@
                 });
             }
 
-            // Initialize Vanta.js 3D NET Background - ORANGE THEME
+            // Initialize Vanta.js 3D Globe Background - WHITE & BLUE THEME
             if (typeof VANTA !== 'undefined') {
-                VANTA.NET({
+                VANTA.GLOBE({
                     el: "#tech-bg",
                     mouseControls: true,
                     touchControls: true,
@@ -1520,12 +1530,10 @@
                     minWidth: 200.00,
                     scale: 1.00,
                     scaleMobile: 1.00,
-                    color: 0xff8c00,
-                    backgroundColor: 0xfff3e0,
-                    points: 10.00,
-                    maxDistance: 20.00,
-                    spacing: 16.00,
-                    showDots: true
+                    color: 0x0055ff,
+                    color2: 0x00aaff,
+                    backgroundColor: 0xffffff,
+                    size: 1.20
                 });
             }
 
@@ -1585,7 +1593,7 @@
     </script>
     <!-- Three.js and Vanta.js -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.net.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.globe.min.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="script.js"></script>
 </body>
